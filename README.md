@@ -1,18 +1,5 @@
 # Business News (Test Project)
 
-# [Demo](https://bullex.github.io/testProject_BusinessNews/)
-
-GitPages: https://bullex.github.io/testProject_BusinessNews/
-
-### [Список новостей] (https://bullex.github.io/testProject_BusinessNews/)
-### [Список новостей + Edit] (https://bullex.github.io/testProject_BusinessNews/?edit=true)
-### [Компания] (https://bullex.github.io/testProject_BusinessNews/about/)
-### [Компания + Edit] (https://bullex.github.io/testProject_BusinessNews/about/?edit=true)
-### [Редактирование статьи] (https://bullex.github.io/testProject_BusinessNews/news/1/?edit=true)
-### [Статистика] (https://bullex.github.io/testProject_BusinessNews/stats/)
-### [Контакты] (https://bullex.github.io/testProject_BusinessNews/contacts/)
-
-
 # Install
 
 **tl;dr**: Run `$ npm install --global gulp && npm install` in the root directory to get started.

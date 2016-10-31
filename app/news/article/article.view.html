@@ -1,0 +1,18 @@
+<div class="news-item text-center" ng-show="!isEdit || saved">
+    <img class="news-img img-border" ng-src="{{ article.image }}" alt="{{ article.title }}">
+    <h2 ng-bind="article.title"></h2>
+    <p class="news-date" ng-bind="article.date | date"></p>
+    <div ng-bind-html="article.trustedText"></div>
+    <hr>
+</div>
+<form ng-show="isEdit && !saved" name="editForm" ng-submit="save()">
+    <label for="articleTitle">Title: </label>
+    <input id="articleTitle" name="articleTitle" type="text" ng-model="editArticle.title" class="wide" required>
+    <label for="articleImage">Image link: </label>
+    <input id="articleImage" name="articleImage" type="text" ng-model="editArticle.image" class="wide" required>
+    <label for="articleDate">Date: </label>
+    <input id="articleDate" name="articleDate" type="date" ng-model="editArticle.date" required>
+    <label for="articleText">Text: </label>
+    <textarea id="articleText" name="articleText" ng-model="editArticle.text" class="wide" rows="25" required></textarea>
+    <button type="submit" ng-disabled="editForm.$invalid">Save</button>
+</form>

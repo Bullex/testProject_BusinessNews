@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "Business News",
+  "launch_path": "/index.html",
+  "description": "Business News",
+  "icons": {
+    "128": "/assets/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Business News",
+      "description": "Business News"
+    }
+  }
+}

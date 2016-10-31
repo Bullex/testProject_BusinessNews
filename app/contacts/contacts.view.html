@@ -1,0 +1,36 @@
+<h2>Help</h2>
+<div class="contacts">
+    <div><b>General queries:</b> Telephone: 020-7782 5000</div>
+    <div><b>Corporate subscriptions:</b> <a href="mailto:corporatesales@businessday.co.uk">corporatesales@businessday.co.uk</a></div>
+    <div><b>Technical questions:</b> <a href="mailto:help@businessday.co.uk">help@businessday.co.uk</a></div>
+    <div><b>Customer services:</b> <a href="mailto:help@businessday.co.uk">help@businessday.co.uk</a></div>
+    <div><b>Newspaper archive:</b> <a href="mailto:help@businessday.co.uk">help@businessday.co.uk</a></div>
+    <div><b>Legal archive:</b> <a href="mailto:help@businessday.co.uk">help@businessday.co.uk</a></div>
+    <div><b>Crossword Club:</b> <a href="mailto:help@businessday.co.uk">help@businessday.co.uk</a></div>
+    <div><b>Corrections or complaints:</b> <a href="mailto:feedback@businessday.co.uk">feedback@businessday.co.uk</a></div>
+</div>
+<h2>Send message to us:</h2>
+<form name="contactForm" class="contact-form" ng-submit="submit()">
+    <label>Your Name:</label>
+    <input type="text" name="userName" ng-model="form.name" required />
+    <div ng-messages="contactForm.userName.$error" ng-if="contactForm.userName.$dirty">
+        <div ng-message="required">This field is required</div>
+    </div>
+
+    <label>Email Address:</label>
+    <input type="email" name="userEmail" ng-model="form.email" required />
+    <div ng-messages="contactForm.userEmail.$error" ng-if="contactForm.userEmail.$dirty">
+        <div ng-message="required">This field is required</div>
+        <div ng-message="email">Your email address is invalid</div>
+    </div>
+
+    <label>Message:</label>
+    <textarea type="text" name="userMessage" rows="4" ng-model="form.message" ng-minlength="10" ng-maxlength="100" required></textarea>
+    <div ng-messages="contactForm.userMessage.$error" ng-if="contactForm.userMessage.$dirty">
+        <div ng-message="required">This field is required</div>
+        <div ng-message="minlength">Message must be over 10 characters</div>
+        <div ng-message="maxlength">Message must not exceed 100 characters</div>
+    </div>
+    <button type="submit" ng-disabled="contactForm.$invalid">Submit</button>
+    <span class="success-msg" ng-bind="form.success"></span>
+</form>

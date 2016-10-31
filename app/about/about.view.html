@@ -1,0 +1,23 @@
+<div class="about-description">
+    <div ng-class="{'edit-active': isEdit}"
+         ng-click="descriptionActive = true; convertDescription();" ng-hide="isEdit && descriptionActive"
+         event-focus='click' event-focus-id='description'><p ng-bind-html="company.trustedDescription"></p></div>
+    <textarea id="description" ng-model="company.descriptionText" ng-show="isEdit && descriptionActive" ng-blur="descriptionActive = false; convertDescription(true); save()" autofocus></textarea>
+</div>
+<div class="details">
+    <div ng-class="{'edit-active': isEdit && !foundingDateActive}" ng-click="foundingDateActive = true"
+         event-focus='click' event-focus-id='foundingDate'>
+        Founding date: <span ng-bind="company.foundingDate | date" ng-hide="isEdit && foundingDateActive"></span>
+        <input id="foundingDate" type="date" ng-model="company.foundingDate" ng-show="isEdit && foundingDateActive" ng-blur="foundingDateActive = false; save()" autofocus>
+    </div>
+    <div ng-class="{'edit-active': isEdit && !numberOfEmployeesActive}" ng-click="numberOfEmployeesActive = true"
+         event-focus='click' event-focus-id='numberOfEmployeesActive'>
+        Employees: <span ng-bind="company.numberOfEmployees" ng-hide="isEdit && numberOfEmployeesActive"></span>
+        <input id="numberOfEmployeesActive" type="number" ng-model="company.numberOfEmployees" ng-show="isEdit && numberOfEmployeesActive" ng-blur="numberOfEmployeesActive = false; save()" autofocus>
+    </div>
+    <div ng-class="{'edit-active': isEdit && !founderNameActive}" ng-click="founderNameActive = true"
+         event-focus='click' event-focus-id='founderName'>
+        Company founder: <span ng-bind="company.founderName" ng-hide="isEdit && founderNameActive"></span>
+        <input id="founderNameActive" type="string" ng-model="company.founderName" ng-show="isEdit && founderNameActive" ng-blur="founderNameActive = false; save()" autofocus>
+    </div>
+</div>

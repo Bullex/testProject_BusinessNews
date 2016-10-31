@@ -1,0 +1,16 @@
+$grey-main-color: #333;
+$grey-text-color: #777;
+$grey-border: #999;
+$heart-main: #7e3b3b;
+$edit-main: #3f3b7e;
+$error-msg: #a24646;
+$success-msg: #0e810e;
+$btn-clr: #337ab7;
+$btn-border-clr: #2e6da4;
+
+/*****media queries****/
+
+$mobile: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+$desktop: "(min-width: 992px) and (max-width: 1199px)";
+$desktop-large: "(min-width: 1200px)";
